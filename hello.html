@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello! - Student Information System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h2>👋 Hello there!</h2>
+            <p>Welcome to the Student Information System! I'm glad you stopped by to say hi!</p>
+        </div>
+        
+        <div style="padding: 40px 30px; text-align: center;">
+            <h2>What would you like to do?</h2>
+            
+            <div style="margin: 30px 0;">
+                <a href="index_demo.html" class="btn" style="display: block; margin: 10px auto; max-width: 300px; padding: 15px;">
+                    🎯 Try the Working Demo
+                </a>
+                <p style="color: #666; font-size: 14px; margin-top: 5px;">
+                    Uses SQLite - works out of the box!
+                </p>
+            </div>
+            
+            <div style="margin: 30px 0;">
+                <a href="index.html" class="btn" style="display: block; margin: 10px auto; max-width: 300px; padding: 15px; background: #667eea;">
+                    📝 Original Student Form
+                </a>
+                <p style="color: #666; font-size: 14px; margin-top: 5px;">
+                    Requires MySQL database setup
+                </p>
+            </div>
+            
+            <div style="margin: 30px 0;">
+                <a href="view_students_demo.php" class="btn" style="display: block; margin: 10px auto; max-width: 300px; padding: 15px; background: #764ba2;">
+                    👥 View Student Records
+                </a>
+                <p style="color: #666; font-size: 14px; margin-top: 5px;">
+                    See all registered students
+                </p>
+            </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px; text-align: center;">
+            <h3>About This System</h3>
+            <p>This is a comprehensive Student Information System built with:</p>
+            <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                <li><strong>Backend:</strong> PHP</li>
+                <li><strong>Database:</strong> MySQL/SQLite</li>
+                <li><strong>Features:</strong> Form validation, responsive design, error handling</li>
+            </ul>
+            
+            <p style="margin-top: 20px;">
+                <strong>Security Features:</strong> SQL injection prevention, input sanitization, XSS protection
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Add a fun little interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const heading = document.querySelector('.welcome-message h2');
+            heading.addEventListener('click', function() {
+                this.innerHTML = '🎉 Hello! Nice to meet you!';
+                setTimeout(() => {
+                    this.innerHTML = '👋 Hello there!';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

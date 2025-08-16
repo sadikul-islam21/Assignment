@@ -22,6 +22,26 @@ body {
   overflow: hidden;
 }
 
+.welcome-message {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.welcome-message h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.welcome-message p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
 h1 {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -110,11 +130,25 @@ select {
 .btn {
   background: #28a745;
   color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
 }
 
 .btn:hover {
   background: #218838;
   transform: translateY(-2px);
+}
+
+.navigation-links {
+  text-align: center;
+  padding: 20px 30px;
+  border-top: 1px solid #e1e5e9;
+  margin-top: 20px;
+}
+
+.navigation-links .btn {
+  margin: 0 10px;
 }
 
 /* Success and Error Messages */
