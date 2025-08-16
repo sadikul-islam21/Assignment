@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Information Form</h1>
+      <form action="process_form.php" method="post" class="student-form">
+        <div class="form-group">
+          <label for="name">Student Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your full name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="student_id">Student ID:</label>
+          <input
+            type="text"
+            id="student_id"
+            name="student_id"
+            required
+            placeholder="e.g., 222014027"
+            pattern="[0-9]{9}"
+            title="Student ID should be 9 digits"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <select id="department" name="department" required>
+            <option value="">Select Department</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Business Administration">
+              Business Administration
+            </option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+            <option value="English">English</option>
+            <option value="History">History</option>
+            <option value="Economics">Economics</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Submit Information</button>
+          <button type="reset" class="reset-btn">Reset Form</button>
+        </div>
+      </form>
+
+      <div id="message" class="message"></div>
+    </div>
+
+    <script>
+      // Simple form validation
+      document
+        .querySelector(".student-form")
+        .addEventListener("submit", function (e) {
+          const studentId = document.getElementById("student_id").value;
+          if (studentId.length !== 9 || !/^\d+$/.test(studentId)) {
+            e.preventDefault();
+            alert("Please enter a valid 9-digit student ID");
+            return false;
+          }
+        });
+    </script>
+  </body>
+</html>
